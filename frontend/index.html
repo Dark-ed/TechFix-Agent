@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>TechFix Agent</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header><h1>TechFix Agent</h1><p>AI IT Troubleshooter</p></header>
+
+    <main id="chatBox" class="chat-box">
+      <div class="bot-message">Hello 👋 — tell me your tech issue.</div>
+    </main>
+
+
+    <form id="chatForm" class="chat-input">
+      <input id="userInput" autocomplete="off" placeholder="Describe your issue..."/>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <div id="root"></div>
+
+
+  <script src="app.js"></script>
+  <script>
+  window.wxOConfiguration = {
+    orchestrationID: "04d3f3515b0941f987947eed630d67c3_6df9cccf-9570-41aa-a412-ef56c1f8cd9a",
+    hostURL: "https://ca-tor.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:ca-tor:a/04d3f3515b0941f987947eed630d67c3:6df9cccf-9570-41aa-a412-ef56c1f8cd9a::",
+    chatOptions: {
+        agentId: "2f93f673-d9e3-4ec1-a3c5-bf466e66c96e",
+        showLauncher: true
+    }
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);
+</script>
+
+</body>
+</html>

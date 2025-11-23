@@ -1,0 +1,8 @@
+{
+  "WATSON_ASSISTANT_APIKEY": "your-api-key-here",
+  "WATSON_ASSISTANT_URL": "your-watson-assistant-url",
+  "WATSON_ASSISTANT_ID": "your-assistant-id",
+
+  "ORCHESTRATE_APIKEY": "your-orchestrate-api-key",
+  "ORCHESTRATE_URL": "your-orchestrate-url"
+}
