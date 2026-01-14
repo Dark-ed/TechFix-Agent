@@ -29,3 +29,12 @@ and requests permission before executing diagnostic actions.
 - No destructive commands allowed
 - Explicit user permission required before execution
 - Read-only diagnostics only
+
+## API Example
+
+POST /api/plan
+```json
+{
+  "message": "My WiFi is not working"
+}
+
