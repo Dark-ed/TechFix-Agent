@@ -13,4 +13,19 @@ An autonomous AI-powered troubleshooting agent built with:
 
 ## Setup
 ```bash
-npm install
+
+## Problem Solved
+Users often struggle to diagnose technical issues safely. This project provides
+an autonomous AI agent that analyzes problems, creates a step-by-step plan,
+and requests permission before executing diagnostic actions.
+
+## Architecture
+- Express.js backend
+- Hugging Face OpenAI-compatible API
+- Tool execution sandbox with strict allow-list
+- JSON-only agent planning system
+
+## Safety Design
+- No destructive commands allowed
+- Explicit user permission required before execution
+- Read-only diagnostics only
