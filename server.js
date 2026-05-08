@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve frontend folder
-app.use(express.static(path.join(__dirname, '..', 'frontend')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 // Routes
 app.use('/agent', agentRoutes);
@@ -28,7 +28,7 @@ app.get('/health', (_, res) => {
 
 // All other routes serve frontend
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
