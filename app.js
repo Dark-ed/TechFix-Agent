@@ -22,7 +22,7 @@ function clearSpinner() {
   document.querySelector(".bot-temp")?.remove();
 }
 
-const API_BASE = "http://127.0.0.1:5000/agent";
+ const API_BASE = "/agent";
 
 async function safeFetch(url, options = {}, timeoutMs = 20000) {
   const ctrl = new AbortController();
